@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    scroll-behavior: smooth;
+  }
+
+  @keyframes slideDownTwoKeyframe {
+    from{
+      transform: translateY(-56px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .slideDownTwo {
+      animation: slideDownTwoKeyframe 300ms ease-in;
+  }
+
+  @keyframes arrowRightKeyframe {
+    0% {
+      transform: translateX(0);
+      opacity: 1;
+    } 50% {
+      transform: translateX(10px);
+      opacity: 0;
+    } 100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .socketUp img:first-child {
+    transition: transform 0.3s;
+  }
+  
+  .socketUp:hover img:first-child {
+    transform: translateY(-10px);
+  }
+  
+  .socketUp img:nth-child(2) {
+    transition: transform 0.3s;
+  }
+  
+  .socketUp:hover img:nth-child(2) {
+    transform: translateY(-10px);
+  }
+  
+  .socialUp {
+    transition: transform 0.3s;
+  }
+  
+  .socialUp:hover {
+    transform: translateY(-10px);
+  }
+  
+  .socialUp:hover svg {
+    color: black;
+  }
+  
+  @keyframes headerUpDownKeyframe {
+    0% {
+      transform: translateY(0);
+    } 50% {
+      transform: translateY(40px);
+    } 100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes headerLeftRightKeyframe {
+    0% {
+      transform: translateX(0);
+    } 50% {
+      transform: translateX(30px);
+    } 100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes headerTriangleKeyframe {
+    0% {
+      transform: translateX(0) translateY(0);
+    } 25% {
+      transform: translateX(30px) translateY(-30px);
+    } 50% {
+      transform: translateX(30px) translateX(0px);
+    } 100% {
+      transform: translateX(0) translateX(0px);
+    }
+  }
+  
+  @keyframes spinKeyframe {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .scrollToTopBtn {
+    background-color: #fde047;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 80px;
+    right: 50px;
+    z-index: 49;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all .5s ease
+  }
+      
+  .showBtn {
+    opacity: 1;
+    transform: translateY(0)
+  }
+  
+  .slick-prev, .slick-next {
+    display: none !important;
+  }
+
+  .menu:hover img {
+    transform: rotate(-180deg);
+    transition-property: all;
+    transition-duration: 300ms;
+  }
+
+  @keyframes menuUpKeyframe {
+    from{
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .menu.group:hover .invisible {
+      animation: menuUpKeyframe 300ms ease-in;
+  }
+  
+  .fill-current {
+    color: rgb(161 161 170);
+    transition: fill 0.3s;
+}
+
+.logo:hover svg path {
+    fill: black;
+}
+
+@keyframes headerImageKeyframe {
+  from{
+    transform: translateX(300px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.header-image {
+  animation: headerImageKeyframe 1s ease-in-out;
+}
+
+@keyframes headerSliderKeyframe {
+  from{
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.header-slider {
+  animation: headerSliderKeyframe 0.5s ease-in-out;
+}
+
+@keyframes aboutImageKeyframe {
+  from{
+    transform: translateX(-300px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.about-image {
+  animation: aboutImageKeyframe 1s ease-in-out;
+}
